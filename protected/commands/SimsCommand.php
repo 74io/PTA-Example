@@ -5,19 +5,9 @@
  */
 class SimsCommand extends CConsoleCommand
 {
-	/*
-	public function run($args)
-    {
-        echo 'hello yii friends';
-    }
-    */
+
    public $schoolId;
-	
-	public function actionHelp()
-	{
-		echo "Help with my command";
-	}
-    
+
 	/**
 	 * Loads SIMS XML files into the correct database
 	 * @return void
