@@ -1,0 +1,66 @@
+<?php
+$this->widget('bootstrap.widgets.TbGridView',array(
+	'id'=>'pupil-ks2-subjects-grid',
+	'type'=>'bordered condensed',
+	'template'=>'{items}',
+	'ajaxUpdate'=>false,
+	'dataProvider'=>$dataProvider,
+	'columns'=>array(
+		array(
+		'name'=>'subject',
+		'header'=>'Subject',
+		//'cssClassExpression'=>array($component,'getCellCssAstarToA'),
+		//'type'=>'raw',
+		),
+		array(
+		'name'=>'set_code',
+		'header'=>'Class',
+		//'cssClassExpression'=>array($component,'getCellCssAstarToA'),
+		//'type'=>'raw',
+		),
+		array(
+		'name'=>'teacher',
+		'header'=>'Teacher',
+		//'cssClassExpression'=>array($component,'getCellCssAstarToA'),
+		//'type'=>'raw',
+		'visible'=>$hasMisAccess,
+		),
+		array(
+		'name'=>'no_gcses',
+		'header'=>'Worth<br>X GCSEs',
+		//'cssClassExpression'=>array($component,'getCellCssAstarToA'),
+		'type'=>'raw',
+		),
+		array(
+		'name'=>'qualification',
+		'header'=>'Qualification',
+		//'cssClassExpression'=>array($component,'getCellCssAstarToA'),
+		//'type'=>'raw',
+		),
+		array(
+		'name'=>'dcp_result',
+		'header'=>'DCP',
+		'cssClassExpression'=>array($component,'getCellCssDcpResult'),
+		//'type'=>'raw',
+		),
+		array(
+		'name'=>'target_result',
+		'header'=>'Target',
+		//'cssClassExpression'=>array($component,'getCellCssAstarToA'),
+		//'type'=>'raw',
+		),
+		array(
+		'name'=>'dcp_standardised_points',
+		'header'=>'DCP<br>Score',
+		//'cssClassExpression'=>array($component,'getCellCssAstarToA'),
+		'type'=>'raw',
+		),
+
+		array(
+		'name'=>'target_standardised_points',
+		'header'=>'Target<br>Score',
+		//'cssClassExpression'=>array($component,'getCellCssAstarToA'),
+		'type'=>'raw',
+		),
+	),
+)); ?>

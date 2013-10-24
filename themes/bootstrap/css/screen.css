@@ -1,0 +1,635 @@
+/* Override some defaults */
+
+/*Prevents main body from scrolling when modal is open*/
+body.modal-open {
+    overflow: hidden;
+}
+
+/*Bootstrap inline does not seem to work version??*/
+ul.inline li {
+    display: inline;
+}
+
+#ks4breakdown-container ul.inline li {
+    padding:0 5px 0 5px;
+}
+
+ul.toggle-styles{
+	padding-top: 25px;
+}
+
+body {
+	padding-top: 40px; 
+}
+
+/*Ensures menus that flow outside on tab content are not hidden*/
+#atoc .tab-content {
+    overflow: visible;
+}
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+  }
+}
+
+/*iPad portriat and landscape*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  .grid-view table {
+    font-size:12px;
+  }
+}
+
+
+
+
+
+#header{
+	background-color:#F1F1F1;
+	border-bottom: 1px solid #ccc;
+}
+
+.navbar-fixed-top {
+margin-bottom: 0;
+}
+
+.breadcrumb {
+	padding:0;
+	margin-top:20px;
+    background-color:#F1F1F1;
+}
+
+
+h3.school-name{
+font-family: 'Alfa Slab One', Arial;
+text-shadow: 0 2px 0 white;
+font-weight: bold;
+font-size: 1.7em;
+color: #08C;
+}
+
+h1 small {
+    font-size: 20px;
+}
+
+/*Hide help container initially*/
+.help-container{
+	display:none;
+}
+.show-help, .screen-cast{
+	font-weight:bold;
+}
+
+.footer {
+padding: 70px 0;
+margin-top: 70px;
+border-top: 1px solid #E5E5E5;
+background-color: whiteSmoke;
+}
+
+footer p {
+    text-align: center; /* center align it with the container */
+}
+
+.navbar .brand{
+	color:#fff;
+	padding-left:32px;
+	margin-left:5px;
+	background: url("../images/icon.gif") no-repeat;
+}
+
+
+/*Remove the standard grid view loading spinner*/
+.grid-view-loading {
+    background: none;
+}
+
+/* Required when using edit icons with fontawesome */
+.grid-view td.edit-column a{
+    color:#000;
+    text-decoration:none;
+}
+
+/*Hide outline on links for FF and the like*/
+a:focus {
+  outline: none;
+}
+
+/*CGridView Overrides*/
+.grid-view {
+	padding-top:2px;
+}
+
+/*Override to prevent yii booster arrow*/
+.grid-view table.items th:hover a:after {
+	content:""; 
+	display:none; 
+	position:absolute; 
+	top:0; 
+	right:-10px; 
+	width:14px; 
+	height:14px; 
+	line-height:14px; 
+	vertical-align:text-top; 
+	background-image:none; 
+	background-position:none;
+	background-repeat:none;
+}
+.grid-view table.items th:hover a.asc:after {background-position:none;}
+
+
+
+/*
+.grid-view table th a.asc {
+    padding-right: 10px;
+}
+.grid-view table th a.desc {
+    padding-right: 10px;
+}
+*/
+/*Change color of selected row*/
+.grid-view table.items tr.selected td {
+    background: none repeat scroll 0 0 #FDF5D9;
+}
+
+
+/*CSS for the jQuery UI date picker*/
+/*
+div.ui-datepicker {
+    font-size: 12px;
+	display:none;
+}
+*/
+
+/*Summary of results above tables*/
+.summary{
+	font-weight:bold;
+	text-align:right;
+	padding:5px;
+}
+
+
+/*Puts a border around active select boxes*/
+.filter-active{
+	border: 2px solid #0088CC;
+}
+
+/*Sticky can be applied using the waypoints plugin*/
+.affix.sticky-ks4pills{
+    top: 40px; /*To clear main nav bar*/
+    padding-bottom:3px;
+    z-index:900;
+    background-color:#FFF;
+    width:inherit;
+}
+
+
+.affix.sticky-ks4filter{
+    position: fixed;
+    top: 40px; /*To clear main nav bar*/
+	min-width:130px;
+}
+
+.on.affix.sticky-ks4filter{
+    position: static;
+    top: 40px; /*To clear main nav bar*/
+	min-width:130px;
+}
+
+.pin-off{
+	color: #000;
+}
+
+
+#ks4subject-grid thead.affix, #ks4breakdown-grid-0 thead.affix{
+    top: 40px; /*To clear main nav bar*/
+    background-color:#FFF;
+    border-bottom: 1px solid #dddddd;
+    z-index: 1000;
+}
+
+
+/*Override to make drop downs show with hover*/
+
+div.navbar-fixed-top ul.nav li.dropdown:hover ul.dropdown-menu {
+  display: block;
+}
+
+
+
+/*Override to prevent the menu disappearing if you hit the gap at the top on menu bar*/
+
+div.navbar-fixed-top .dropdown-menu{
+	margin-top:0;
+}
+
+
+.pull-right .dropdown-menu {
+  margin-top: 0;
+}
+
+.ajax-loading {
+	height:16px;
+    background: url("../images/loading.gif") no-repeat scroll 0 0 transparent;
+    padding-left:20px;
+    color:#ccc;
+}
+
+/*CSS to control the filtering of sets*/
+.filtered-tab{
+	font-weight:bold;
+}
+
+.excluded{
+	text-decoration: line-through;
+}
+
+.filtered-set tr{
+	color:#CCC;
+}
+
+.already-excluded{
+	color:#0088CC;
+}
+
+/*Change the default width of the checkbox label to prevent accidental clicking*/
+label.checkbox checkbox{
+	width:10px;
+}
+
+#cohort-container label{
+	display:inline; 
+	padding:5px; 
+	font-weight:bold;
+}
+
+/* Grid cell colors for reports*/
+/*
+#ks4summary-container .green, #ks4subject-container .green, #ks4pupil-summary-container .green{
+	background-color:#DFF0D8;
+}
+#ks4summary-container .red, #ks4subject-container .red, #ks4pupil-summary-container .red{
+	background-color:#F2DEDE;
+}
+#ks4summary-container .amber, #ks4subject-container .amber, #ks4pupil-summary-container .amber{
+	background-color:#FCF8E3;
+}
+Note, below was html body td.green
+*/
+div.grid-view table.items tr td.green{
+	background-color:#DFF0D8;
+}
+div.grid-view table.items tr  td.red{
+	background-color:#F2DEDE;
+}
+div.grid-view table.items tr  td.amber{
+	background-color:#FCF8E3;
+}
+
+.white{
+	background-color:#FFF !important;
+}
+
+/*End grid cell colors*/
+
+
+
+/*Adds a buffer to prevent drop downs from showing scroll bar*/
+#ks4summary-container .tab-pane{
+	margin-bottom:100px;
+}
+
+/* Start Group grid within the ks4 summary*/
+
+/*Note this affects jerky movement in IE9. This was adding max-width rather than width*/
+#group-grid{
+	display:none;
+	max-height:400px;
+	max-width:100%;
+	overflow:auto;
+	margin-bottom:10px;
+	padding-right:5px;
+}
+
+#ks4subject-grid #group-grid{
+	max-height: none;
+}
+
+
+
+#group-grid .summary, #subject-group-grid .summary{
+	text-align:left;
+}
+
+/*Various fixes for preventing highlighted rows in*/
+
+.grid-view table.items tr.drop-down td { background:none; }
+
+.grid-view .table-striped tbody tr:nth-child(odd) td,
+.grid-view .table-striped tbody tr:nth-child(odd) th {
+    background-color: #f9f9f9;
+}
+
+.group-active{
+	background-color:#D9EDF7;
+}
+
+
+/*
+td.group-active {
+	position: relative;
+
+}
+
+td.group-active:after, td.group-active:before {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+ td.group-active:after {
+	border-color: rgba(217, 237, 247, 0);
+	border-top-color: #D9EDF7;
+	border-width: 10px;
+	left: 50%;
+	margin-left: -10px;
+}
+ td.group-active:before {
+	border-color: rgba(221, 221, 221, 0);
+	border-top-color: #ddd;
+	border-width: 11px;
+	left: 50%;
+	margin-left: -11px;
+}*/
+
+
+
+
+
+
+
+
+
+
+#ks4summary-container a.btn{
+	width:35px;
+}
+/*End Group grid within the ks4 summary*/
+
+/*CDetailView - Add a margin to the top of detail views*/
+table.detail-view{
+	margin-top:20px;
+}
+
+/*CSS used in show qualifications*/
+#sticky-table-container{
+	max-height:500px;
+	overflow:auto;
+	border-top:solid 1px #ccc;
+}
+
+#sticky-table-container .grid-view{
+	padding:0;
+}
+
+.sticky-table-header{
+	width:100%;
+	text-align:left;
+}
+
+/*jQuery file upload*/
+#result-sample-grid table td,
+#result-sample-grid table th{
+	background-color:#fff;
+
+}
+
+/*Bootstrap editable override*/
+
+a.editable, a.editable:hover {
+text-decoration: none;
+border-bottom: dotted 1px #666;
+	color:#000;
+}
+
+.editable-loading {
+  background: url('../images/loading.gif') center center no-repeat;  
+  height: 20px;
+}
+
+/*Editable format to be used in help docs etc*/
+span.editable {
+	border-bottom: dotted 1px #666;
+}
+
+.accepted-results{
+	height:100px;
+	padding:5px;
+}
+
+
+/*External Filter Container*/
+.external-filter-container{
+	margin-bottom:0;
+}
+
+/*Chart container*/
+
+.chart-container{
+	min-width:780px; 
+	max-height:600px;
+ 	margin: 0 auto;
+}
+
+#venn{
+	position:relative;
+	width:750px;
+	height:750px;
+}
+
+#venn .circle-a, 
+#venn .circle-b, 
+#venn .circle-c,
+#venn .top-a,
+#venn .middle-a,
+#venn .middle-b,
+#venn .middle-c,
+#venn .bottom-a,
+#venn .bottom-b,
+#venn .bottom-c
+{
+	position:absolute;
+	font-weight:bold;
+	color:#333;
+}
+
+#venn .circle-a{
+	left:330px;
+	top:20px;
+}
+
+#venn .circle-b{
+	left:45px;
+	bottom:60px;
+}
+
+#venn .circle-c{
+	right:45px;
+	bottom:60px;
+}
+
+#venn .top-a{
+	left:320px;
+	top:150px;
+}
+
+#venn .middle-a{
+	left:220px;
+	bottom:370px;
+}
+
+#venn .middle-b{
+	left:320px;
+	bottom:300px;
+}
+
+#venn .middle-c{
+	left:440px;
+	bottom:370px;
+}
+
+#venn .bottom-a{
+	left:120px;
+	bottom:220px;
+}
+
+#venn .bottom-b{
+	left:320px;
+	bottom:170px;
+}
+
+#venn .bottom-c{
+	left:500px;
+	bottom:220px;
+}
+
+.home-unit {
+	text-align: center;
+    background-color: #000000;
+    border-radius: 6px 6px 6px 6px;
+    margin-bottom: 30px;
+    padding: 30px;
+    color:#FFF;
+}
+
+.home-unit .btn {
+    -moz-transition: none 0s ease 0s;
+    border: 0 none;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 1px 5px rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 200;
+    padding: 14px 24px;
+}
+
+.embed-wrapper{
+	max-height:540px;
+    max-width:960px;
+    text-align:center;
+    margin:auto;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    height: 0;
+    overflow: hidden;
+    text-align:center;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height:540px;
+    max-width:960px;
+}
+
+/*DATE BLOCK*/
+div.dateblock {
+	 cursor:default;
+	 width:60px;
+	 padding:0;
+	 margin:0;
+	 line-height: 1;
+	 float: left;
+	 color: #fff;
+	 text-align: center;
+	border-color:#ccc;
+}
+div.dateblock hr {
+	margin:2px;	
+}
+div.dateblock span {
+	color:#666;
+	display: block;  
+	text-align: center;
+}
+div.dateblock span.day {
+	padding-top:2px;
+	font-weight: bold;
+		text-shadow: 0 2px 0 #FFF;
+}
+div.dateblock span.month {
+	text-transform: uppercase;
+	font-weight: bold;
+	color:#fff;
+	line-height: 20px;
+ 	border-bottom-color: #103D97;
+ 	-webkit-border-radius: 4px 4px 0px 0px ;
+	-moz-border-radius: 4px 4px 0px 0px ;
+    border-radius: 4px 4px 0px 0px ;
+}
+div.dateblock span.year {
+ 
+}
+div.dateblock span.time {
+ 	font-size: .8em;
+}
+
+/* Override for small bootstrap button dropdown menu*/
+.btn-small + a + ul{
+	min-width:100px;
+	padding:2px 0 2px 0;
+}
+.btn-small + a + ul li a{
+ font-size:12px;
+}
+
+/*Make the tool tips appear above the modal*/
+.tooltip {
+  z-index: 1050;
+}
+
+.intro{
+	position: absolute;
+}
+
+@media (max-width: 979px) {
+	.intro-wrapper img {
+		padding-top: 50px;	
+	}
+}
+
+/*Multiselect*/

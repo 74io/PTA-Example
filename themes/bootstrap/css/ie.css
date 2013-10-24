@@ -1,0 +1,4 @@
+/*Make buttons smaller in IE9 so they don't wrap*/
+.editable-popover .btn{
+	padding: 4px 10px;
+}
